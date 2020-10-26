@@ -4,10 +4,10 @@ import 'dart:io';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:system_network_proxy_platform_interface/system_network_proxy_platform_interface.dart';
 
-class SystemNetworkProxyWeb extends SystemNetworkProxyPlatform {
+class SystemNetworkProxyPlugin extends SystemNetworkProxyPlatform {
   /// Registers this class as the default instance of [UrlLauncherPlatform].
   static void registerWith(Registrar registrar) {
-    SystemNetworkProxyPlatform.instance = SystemNetworkProxyWeb();
+    SystemNetworkProxyPlatform.instance = SystemNetworkProxyPlugin();
   }
 
   /// Returns `true` if this platform is able to getProxyEnable.
