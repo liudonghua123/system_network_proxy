@@ -19,7 +19,10 @@ class SystemNetworkProxyLinux extends SystemNetworkProxyPlatform {
   Future<bool> getProxyEnable() async {
     try {
       var results = await Process.run('bash', [
-        'gsettings get org.gnome.system.proxy mode',
+        '-c',
+        concatCommands([
+          'gsettings get org.gnome.system.proxy mode',
+        ])
       ]);
       print('get proxyEnable, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
       var proxyEnableLine = (results.stdout as String).split('\n').where((item) => item != '').first;
@@ -36,7 +39,10 @@ class SystemNetworkProxyLinux extends SystemNetworkProxyPlatform {
     try {
       var proxyMode = proxyEnable ? 'manual' : 'none';
       var results = await Process.run('bash', [
-        'gsettings set org.gnome.system.proxy mode $proxyMode',
+        '-c',
+        concatCommands([
+          'gsettings set org.gnome.system.proxy mode $proxyMode',
+        ])
       ]);
       print('set proxyEnable, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
       return results.exitCode == 0;

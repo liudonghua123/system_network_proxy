@@ -19,7 +19,10 @@ class SystemNetworkProxyMacos extends SystemNetworkProxyPlatform {
   Future<bool> getProxyEnable() async {
     try {
       var results = await Process.run('bash', [
-        'networksetup -getwebproxy wi-fi',
+        '-c',
+        concatCommands([
+          'networksetup -getwebproxy wi-fi',
+        ])
       ]);
       print('get proxyEnable, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
       var proxyEnableLine =
@@ -37,8 +40,11 @@ class SystemNetworkProxyMacos extends SystemNetworkProxyPlatform {
     try {
       var proxyMode = proxyEnable ? 'on' : 'off';
       var results = await Process.run('bash', [
-        'networksetup -setwebproxystate wi-fi $proxyMode',
-        // 'networksetup -setsecurewebproxystate wi-fi $proxyMode',
+        '-c',
+        concatCommands([
+          'networksetup -setwebproxystate wi-fi $proxyMode',
+          // 'networksetup -setsecurewebproxystate wi-fi $proxyMode',
+        ])
       ]);
       print('set proxyEnable, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
       return results.exitCode == 0;
@@ -53,7 +59,10 @@ class SystemNetworkProxyMacos extends SystemNetworkProxyPlatform {
   Future<String> getProxyServer() async {
     try {
       var results = await Process.run('bash', [
-        'networksetup -getwebproxy wi-fi',
+        '-c',
+        concatCommands([
+          'networksetup -getwebproxy wi-fi',
+        ])
       ]);
       print('get proxyServer, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
 
