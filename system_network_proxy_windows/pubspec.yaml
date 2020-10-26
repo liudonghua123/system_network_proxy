@@ -1,6 +1,6 @@
 name: system_network_proxy_windows
 description: A new flutter plugin project.
-version: 0.0.1
+version: 1.0.0
 homepage: https://github.com/liudonghua123/system_network_proxy
 
 environment:
@@ -10,8 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  system_network_proxy_platform_interface:
-    path: ../system_network_proxy_platform_interface/
+  system_network_proxy_platform_interface: ^1.0.0
 
 dev_dependencies:
   flutter_test:
