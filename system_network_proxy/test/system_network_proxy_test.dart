@@ -18,6 +18,6 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    expect(await SystemNetworkProxy.platformVersion, '42');
+    expect(await SystemNetworkProxy.getProxyEnable(), true);
   });
 }

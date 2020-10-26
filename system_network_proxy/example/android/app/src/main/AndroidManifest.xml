@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.liudonghua.system_network_proxy_example">
+    package="com.example.example">
    <application
-        android:label="system_network_proxy_example"
+        android:label="example"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

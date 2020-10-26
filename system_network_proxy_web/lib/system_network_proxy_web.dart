@@ -1,14 +1,36 @@
-
 import 'dart:async';
+import 'dart:io';
 
-import 'package:flutter/services.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:system_network_proxy_platform_interface/system_network_proxy_platform_interface.dart';
 
-class SystemNetworkProxyWeb {
-  static const MethodChannel _channel =
-      const MethodChannel('system_network_proxy_web');
+class SystemNetworkProxyWeb extends SystemNetworkProxyPlatform {
+  /// Registers this class as the default instance of [UrlLauncherPlatform].
+  static void registerWith(Registrar registrar) {
+    SystemNetworkProxyPlatform.instance = SystemNetworkProxyWeb();
+  }
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
+  /// Returns `true` if this platform is able to getProxyEnable.
+  @override
+  Future<bool> getProxyEnable() {
+    throw UnimplementedError('getProxyEnable() has not been implemented.');
+  }
+
+  /// Returns `true` if this platform is able to setProxyEnable [proxyEnable].
+  @override
+  Future<bool> setProxyEnable(bool proxyEnable) {
+    throw UnimplementedError('setProxyEnable() has not been implemented.');
+  }
+
+  /// Returns `true` if this platform is able to getProxyServer.
+  @override
+  Future<String> getProxyServer() {
+    throw UnimplementedError('getProxyServer() has not been implemented.');
+  }
+
+  /// Returns `true` if this platform is able to setProxyServer [proxyServer].
+  @override
+  Future<bool> setProxyServer(String proxyServer) {
+    throw UnimplementedError('setProxyServer() has not been implemented.');
   }
 }

@@ -67,6 +67,18 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.6.3-nullsafety.1"
   matcher:
     dependency: transitive
     description:
@@ -88,6 +100,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.8.0-nullsafety.1"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.3"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -125,6 +144,41 @@ packages:
     dependency: "direct main"
     description:
       path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
+  system_network_proxy_linux:
+    dependency: transitive
+    description:
+      path: "../../system_network_proxy_linux"
+      relative: true
+    source: path
+    version: "0.0.1"
+  system_network_proxy_macos:
+    dependency: transitive
+    description:
+      path: "../../system_network_proxy_macos"
+      relative: true
+    source: path
+    version: "0.0.1"
+  system_network_proxy_platform_interface:
+    dependency: transitive
+    description:
+      path: "../../system_network_proxy_platform_interface"
+      relative: true
+    source: path
+    version: "0.0.1"
+  system_network_proxy_web:
+    dependency: transitive
+    description:
+      path: "../../system_network_proxy_web"
+      relative: true
+    source: path
+    version: "0.0.1"
+  system_network_proxy_windows:
+    dependency: transitive
+    description:
+      path: "../../system_network_proxy_windows"
       relative: true
     source: path
     version: "0.0.1"

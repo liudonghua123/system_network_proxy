@@ -1,8 +1,8 @@
 name: system_network_proxy
 description: A new flutter plugin project.
 version: 0.0.1
-author:
-homepage:
+author: Donghua Liu
+homepage: https://github.com/liudonghua123/system_network_proxy
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -11,10 +11,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  system_network_proxy_platform_interface:
+    path: ../system_network_proxy_platform_interface/
+  system_network_proxy_web:
+    path: ../system_network_proxy_web/
+  system_network_proxy_linux:
+    path: ../system_network_proxy_linux/
+  system_network_proxy_macos:
+    path: ../system_network_proxy_macos/
+  system_network_proxy_windows:
+    path: ../system_network_proxy_windows/
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  test: ^1.3.0
+  mockito: ^4.1.1
+  plugin_platform_interface: ^1.0.0
+  pedantic: ^1.8.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -32,6 +46,14 @@ flutter:
         pluginClass: SystemNetworkProxyPlugin
       ios:
         pluginClass: SystemNetworkProxyPlugin
+      web:
+        default_package: system_network_proxy_web
+      linux:
+        default_package: system_network_proxy_linux
+      macos:
+        default_package: system_network_proxy_macos
+      windows:
+        default_package: system_network_proxy_windows
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

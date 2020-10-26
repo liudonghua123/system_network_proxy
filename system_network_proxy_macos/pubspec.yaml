@@ -1,8 +1,8 @@
 name: system_network_proxy_macos
 description: A new flutter plugin project.
 version: 0.0.1
-author:
-homepage:
+author: Donghua Liu
+homepage: https://github.com/liudonghua123/system_network_proxy
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -11,10 +11,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  system_network_proxy_platform_interface:
+    path: ../system_network_proxy_platform_interface/
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  pedantic: ^1.8.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -28,7 +31,8 @@ flutter:
   plugin:
     platforms:
       macos:
-        pluginClass: SystemNetworkProxyMacosPlugin
+        dartPluginClass: SystemNetworkProxyMacos
+        pluginClass: none
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
