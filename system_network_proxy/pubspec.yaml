@@ -1,7 +1,6 @@
 name: system_network_proxy
 description: A new flutter plugin project.
 version: 0.0.1
-author: Donghua Liu
 homepage: https://github.com/liudonghua123/system_network_proxy
 
 environment:
@@ -54,7 +53,6 @@ flutter:
         default_package: system_network_proxy_macos
       windows:
         default_package: system_network_proxy_windows
-
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
@@ -65,7 +63,6 @@ flutter:
   #
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
-
   # To add custom fonts to your plugin package, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
