@@ -58,7 +58,7 @@ This is a federated plugin which get and set system scoped proxy.
 
    `gsettings set org.gnome.system.proxy use-same-proxy true`
 
-### macos (**do need root permission for set operations**)
+### macos (**do NOT need root permission for get/set operations**)
 
 1. get proxyEnable and proxyServer
 
