@@ -1,6 +1,6 @@
 name: system_network_proxy_platform_interface
-description: A new flutter plugin project.
-version: 1.0.0
+description: It's a simple utility of system network proxy which can get and set status of proxy, details of proxy.
+version: 1.0.1
 homepage: https://github.com/liudonghua123/system_network_proxy
 
 environment:
