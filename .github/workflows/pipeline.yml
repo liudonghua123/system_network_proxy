@@ -19,7 +19,6 @@ jobs:
           credentialJson: ${{ secrets.CREDENTIAL_JSON }}
           relativePath: system_network_proxy_platform_interface
           skipTests: true
-          dryRunOnly: true
 
   publish_platform:
     needs: [publish_platform_interface]
@@ -42,7 +41,6 @@ jobs:
           credentialJson: ${{ secrets.CREDENTIAL_JSON }}
           relativePath: ${{ matrix.platform }}
           skipTests: true
-          dryRunOnly: true
 
   publish:
     needs: [publish_platform_interface, publish_platform]
@@ -56,4 +54,3 @@ jobs:
           credentialJson: ${{ secrets.CREDENTIAL_JSON }}
           relativePath: system_network_proxy
           skipTests: true
-          dryRunOnly: true
