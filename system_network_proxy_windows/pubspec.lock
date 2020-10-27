@@ -131,10 +131,10 @@ packages:
   system_network_proxy_platform_interface:
     dependency: "direct main"
     description:
-      path: "../system_network_proxy_platform_interface"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: system_network_proxy_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.0"
   term_glyph:
     dependency: transitive
     description:

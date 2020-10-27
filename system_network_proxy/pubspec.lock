@@ -388,38 +388,38 @@ packages:
   system_network_proxy_linux:
     dependency: "direct main"
     description:
-      path: "../system_network_proxy_linux"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: system_network_proxy_linux
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.0"
   system_network_proxy_macos:
     dependency: "direct main"
     description:
-      path: "../system_network_proxy_macos"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: system_network_proxy_macos
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.0"
   system_network_proxy_platform_interface:
     dependency: "direct main"
     description:
-      path: "../system_network_proxy_platform_interface"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: system_network_proxy_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.0"
   system_network_proxy_web:
     dependency: "direct main"
     description:
-      path: "../system_network_proxy_web"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: system_network_proxy_web
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.0"
   system_network_proxy_windows:
     dependency: "direct main"
     description:
-      path: "../system_network_proxy_windows"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: system_network_proxy_windows
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.0"
   term_glyph:
     dependency: transitive
     description:
