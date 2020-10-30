@@ -6,7 +6,7 @@ This is a federated plugin which get and set system scoped proxy.
 
 ## Implementation details
 
-### windows (**do not need administrator permission** because the operations are only current user scoped)
+### windows (**do NOT need administrator permission** because the operations are only current user scoped)
 
 1. get proxyEnable and proxyServer
 
@@ -28,7 +28,7 @@ This is a federated plugin which get and set system scoped proxy.
 
    `reg add 'HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings' /v ProxyServer /f /d <http://proxy.host:port>`
 
-### linux (**do need root permission for set operations**, currently only support **GNOME 3** desktop which is more widely used in linux world, other desktop like xde maybe support later)
+### linux (**do NOT need root permission for get/set operations**, currently only support **GNOME 3** desktop which is more widely used in linux world, other desktop like xde maybe support later)
 
 1. get proxyEnable and proxyServer
 
