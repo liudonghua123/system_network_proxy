@@ -1,10 +1,11 @@
 name: system_network_proxy_web
 description: It's a simple utility of system network proxy which can get and set status of proxy, details of proxy.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/liudonghua123/system_network_proxy
+publish_to: https://pub.dartlang.org
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.20.0"
 
 dependencies:
@@ -21,7 +22,7 @@ dev_dependencies:
   system_network_proxy:
     path: ../system_network_proxy/
   pedantic: ^1.8.0
-  mockito: ^4.1.1
+  mockito: ^5.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
