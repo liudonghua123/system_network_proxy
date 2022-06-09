@@ -24,9 +24,13 @@ class SystemNetworkProxyMacos extends SystemNetworkProxyPlatform {
           'networksetup -getwebproxy wi-fi',
         ])
       ]);
-      print('get proxyEnable, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
-      var proxyEnableLine =
-          (results.stdout as String).split('\n').where((item) => item.contains('Enabled')).first.trim();
+      print(
+          'get proxyEnable, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
+      var proxyEnableLine = (results.stdout as String)
+          .split('\n')
+          .where((item) => item.contains('Enabled'))
+          .first
+          .trim();
       return proxyEnableLine.endsWith('Yes');
     } catch (e) {
       print(e);
@@ -46,7 +50,8 @@ class SystemNetworkProxyMacos extends SystemNetworkProxyPlatform {
           // 'networksetup -setsecurewebproxystate wi-fi $proxyMode',
         ])
       ]);
-      print('set proxyEnable, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
+      print(
+          'set proxyEnable, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
       return results.exitCode == 0;
     } catch (e) {
       print(e);
@@ -64,12 +69,15 @@ class SystemNetworkProxyMacos extends SystemNetworkProxyPlatform {
           'networksetup -getwebproxy wi-fi',
         ])
       ]);
-      print('get proxyServer, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
+      print(
+          'get proxyServer, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
 
-      var match = RegExp(r"^.*Enabled: (?<enabled>.*)\nServer: (?<server>.*)\nPort: (?<port>.*)\n.*$", multiLine: true)
+      var match = RegExp(
+              r"^.*Enabled: (?<enabled>.*)\nServer: (?<server>.*)\nPort: (?<port>.*)\n.*$",
+              multiLine: true)
           .firstMatch(results.stdout);
-      var server = match.namedGroup('server');
-      var port = match.namedGroup('port');
+      var server = match?.namedGroup('server') ?? '';
+      var port = match?.namedGroup('port') ?? '';
       if (server == '') {
         return '';
       }
@@ -84,7 +92,8 @@ class SystemNetworkProxyMacos extends SystemNetworkProxyPlatform {
   @override
   Future<bool> setProxyServer(String proxyServer) async {
     try {
-      var match = RegExp(r"^(?:http://)?(?<host>.+):(?<port>\d+)$").firstMatch(proxyServer);
+      var match = RegExp(r"^(?:http://)?(?<host>.+):(?<port>\d+)$")
+          .firstMatch(proxyServer);
       if (match == null) {
         print('proxyServer parse error!');
         return false;
@@ -98,7 +107,8 @@ class SystemNetworkProxyMacos extends SystemNetworkProxyPlatform {
           // 'networksetup -setsecurewebproxy wi-fi $host $port',
         ])
       ]);
-      print('set proxyServer, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
+      print(
+          'set proxyServer, exitCode: ${results.exitCode}, stdout: ${results.stdout}');
       return results.exitCode == 0;
     } catch (e) {
       print(e);
