@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:meta/meta.dart' show required;
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'method_channel_system_network_proxy.dart';
@@ -18,7 +17,8 @@ abstract class SystemNetworkProxyPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static SystemNetworkProxyPlatform _instance = MethodChannelSystemNetworkProxy();
+  static SystemNetworkProxyPlatform _instance =
+      MethodChannelSystemNetworkProxy();
 
   /// The default instance of [SystemNetworkProxyPlatform] to use.
   ///
